@@ -1,0 +1,25 @@
+{
+   "name": "rest_jwt_crud",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/bcrypt": "^3.0.0",
+      "@types/express": "^4.17.11",
+      "@types/jsonwebtoken": "^8.5.1",
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "bcrypt": "^5.0.1",
+      "express": "^4.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.10",
+      "ts-node-dev": "^1.1.6",
+      "typeorm": "0.2.32"
+   },
+   "scripts": {
+      "start": "ts-node-dev src/index.ts"
+   }
+}
