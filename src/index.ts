@@ -5,10 +5,10 @@ import * as express from 'express';
 import {Request, Response} from 'express';
 import { RegisterDTO } from "./dto/request/register.dto";
 import { Database } from "./database";
-import { userInfo } from "os";
 import { PasswordHash } from "./security/passwordhash";
 import { AuthenticationDTO } from "./dto/response/authentication.dto";
 import { UserDTO } from "./dto/response/user.dto";
+import { JWT } from "./security/jwt";
 
 const app = express();
 
@@ -54,6 +54,7 @@ app.post("/register", async (req: Request, resp: Response ) =>{
     userDTO.age = user.age;
 
     authenticationDTO.user = userDTO;
+    authenticationDTO.token = await JWT.generateToken(user);
 
     //implement token generation and refresh token
 
